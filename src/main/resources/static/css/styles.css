@@ -1,0 +1,75 @@
+@keyframes fadeIn {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: scale(0);
+  }
+  80% {
+    -webkit-transform: scale(1.02);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+
+.fade-in {
+  animation-name: fadeIn;
+  -webkit-animation-name: fadeIn;
+
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+
+  animation-timing-function: cubic-bezier(.37,.74,.32,.94);
+  -webkit-animation-timing-function: cubic-bezier(.37,.74,.32,.94);
+
+  visibility: visible !important;
+}
+
+* {
+  margin: 0;
+}
+
+#mind-map {
+  height: 100vh;
+  margin: 0 auto;
+}
+
+#glossary {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.term {
+  background: #f8aaaa;
+  padding: 30px;
+  border-radius: 30px;
+  border: 2px solid #05454d;
+  color: black;
+  margin-bottom: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.term > .title {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.term:first-child {
+ margin-top: 8px;
+}
+
+body {
+  background: #97f6ff;
+  display: flow;
+}

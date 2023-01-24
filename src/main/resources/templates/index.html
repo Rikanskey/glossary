@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Spring Boot Thymeleaf Hello World Example</title>
+
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/networkgraph.js"></script>
+
+  <script th:inline="javascript">
+    const terms = JSON.parse([[${terms}]]).terms;
+    const termLinks = JSON.parse([[${termLinks}]]).termLinks.map(termLink => [termLink.term_1, termLink.term_2]);
+  </script>
+  <script type="text/javascript" th:src="@{/js/scripts.js}"></script>
+
+  <link rel="stylesheet" th:href="@{/css/styles.css}"/>
+</head>
+
+<body>
+<div id="mind-map"></div>
+<div id="glossary"></div>
+</body>
+</html>
